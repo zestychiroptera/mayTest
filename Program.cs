@@ -55,66 +55,66 @@
 // 2. Have a user provide an input between 1 - 100, validate the value and prompt the user to re-enter a value until they provide an accurate value. Check if the number is even or odd. Ask the user if they want to continue (yes or no), account for validating the response to continue.
 
 
-//bool invalidInput = true;
+bool invalidInput = true;
 
-//while (invalidInput)
-//{
-//    Console.WriteLine("Please enter a value between 1 - 100, to then determine if that number is either even or odd.");
-//    Console.WriteLine("_______________________________________________");
-//    string userInput = Console.ReadLine();
+while (invalidInput)
+{
+    Console.WriteLine("Please enter a value between 1 - 100, to then determine if that number is either even or odd.");
+    Console.WriteLine("_______________________________________________");
+    string userInput = Console.ReadLine();
 
-//    if (int.TryParse(userInput, out int validInput))
-//    {
-//        if ((validInput >= 1) && (validInput <= 100))
-//        {
-//            if ((validInput / 2) == (validInput * 0.5))
-//            {
-//                Console.WriteLine($"Your input was {validInput}.");
-//                Console.WriteLine("You have entered an even number.");
-//                Console.WriteLine("__________________________________");
-//                Console.WriteLine("Would you like to enter a new number?");
-//                string goAgain = Console.ReadLine().ToLower();
-//                if ((goAgain == "yes") || (goAgain == "y"))
-//                {
-//                    invalidInput = true;
-//                }
-//                else
-//                {
-//                    invalidInput = false;
-//                    Console.WriteLine("Goodbye.");
-//                }
-//            }
-//            else
-//            {
-//                Console.WriteLine($"Your input was {validInput}");
-//                Console.WriteLine("You have entered an odd number.");
-//                Console.WriteLine("_________________________________");
-//                Console.WriteLine("Would you like to enter a new number?");
-//                string goAgain = Console.ReadLine().ToLower();
-//                if ((goAgain == "yes") || (goAgain == "y"))
-//                {
-//                    invalidInput = true;
-//                }
-//                else
-//                {
-//                    invalidInput = false;
-//                    Console.WriteLine("Goodbye.");
-//                }
-//            }
-//        }
-//        else
-//        {
-//            Console.WriteLine("You have entered an invalid number. Please enter a number that is between 1 - 100.");
-//            invalidInput = true;
-//        }
+    if (int.TryParse(userInput, out int validInput))
+    {
+        if ((validInput >= 1) && (validInput <= 100))
+        {
+            if ((validInput / 2) == (validInput * 0.5))
+            {
+                Console.WriteLine($"Your input was {validInput}.");
+                Console.WriteLine("You have entered an even number.");
+                Console.WriteLine("__________________________________");
+                Console.WriteLine("Would you like to enter a new number?");
+                string goAgain = Console.ReadLine().ToLower();
+                if ((goAgain == "yes") || (goAgain == "y"))
+                {
+                    invalidInput = true;
+                }
+                else
+                {
+                    invalidInput = false;
+                    Console.WriteLine("Goodbye.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Your input was {validInput}");
+                Console.WriteLine("You have entered an odd number.");
+                Console.WriteLine("_________________________________");
+                Console.WriteLine("Would you like to enter a new number?");
+                string goAgain = Console.ReadLine().ToLower();
+                if ((goAgain == "yes") || (goAgain == "y"))
+                {
+                    invalidInput = true;
+                }
+                else
+                {
+                    invalidInput = false;
+                    Console.WriteLine("Goodbye.");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("You have entered an invalid number. Please enter a number that is between 1 - 100.");
+            invalidInput = true;
+        }
 
-//    }
-//    else
-//    {
-//        Console.WriteLine("That is not a valid input. Please try again.");
-//        invalidInput = true;
-//    }
-//}
+    }
+    else
+    {
+        Console.WriteLine("That is not a valid input. Please try again.");
+        invalidInput = true;
+    }
+}
 
 // 3. Have a user provide a number greater than 0 but less than the max # an integer can be when cubed. Print out the number, the number squared, and the number cubed in a 'table'. Validate the provided input and prompt the user to re-enter the value until they provide an accurate value. Prompt the user to continue (yes or no) , account for validating the response to continue.
 
